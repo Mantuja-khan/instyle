@@ -1,0 +1,204 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * InStyle design system.
+ *
+ * Palette grounded in the reference: warm cream canvas, muted sage green,
+ * terracotta accents, near-black espresso text. Serif display type
+ * (Cormorant Garamond) paired with a clean humanist sans (Karla).
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Brand tokens */
+  --color-sage: var(--sage);
+  --color-sage-deep: var(--sage-deep);
+  --color-sage-soft: var(--sage-soft);
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-deep: var(--terracotta-deep);
+  --color-cream: var(--cream);
+  --color-espresso: var(--espresso);
+  --color-sand: var(--sand);
+
+  /* Luxury Editorial Palette */
+  --color-olive-deep: #202719;
+  --color-sage-luxury: #89966a;
+  --color-cream-luxury: #ffffff;
+  --color-gold-antique: #b7955b;
+
+  --font-display: "Cinzel", "Cormorant Garamond", "Playfair Display", serif;
+  --font-sans: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Cinzel", "Cormorant Garamond", "Playfair Display", serif;
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: #ffffff;
+  --foreground: #18181b;
+  --card: #ffffff;
+  --card-foreground: #18181b;
+  --popover: #ffffff;
+  --popover-foreground: #18181b;
+  --primary: oklch(0.47 0.045 120);
+  --primary-foreground: #ffffff;
+  --secondary: oklch(0.7 0.05 118);
+  --secondary-foreground: oklch(0.25 0.03 120);
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --accent: oklch(0.66 0.115 45);
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: #e4e4e7;
+  --input: #e4e4e7;
+  --ring: oklch(0.62 0.05 118);
+
+  /* Brand */
+  --sage: oklch(0.7 0.05 118);
+  --sage-deep: oklch(0.47 0.045 120);
+  --sage-soft: #f4f4f5;
+  --terracotta: oklch(0.66 0.115 45);
+  --terracotta-deep: oklch(0.55 0.11 42);
+  --cream: #ffffff;
+  --espresso: #18181b;
+  --sand: #f4f4f5;
+}
+
+.dark {
+  --background: oklch(0.22 0.02 75);
+  --foreground: oklch(0.96 0.014 95);
+  --card: oklch(0.27 0.02 75);
+  --card-foreground: oklch(0.96 0.014 95);
+  --popover: oklch(0.27 0.02 75);
+  --popover-foreground: oklch(0.96 0.014 95);
+  --primary: oklch(0.75 0.06 118);
+  --primary-foreground: oklch(0.22 0.03 120);
+  --secondary: oklch(0.35 0.03 118);
+  --secondary-foreground: oklch(0.96 0.014 95);
+  --muted: oklch(0.32 0.02 75);
+  --muted-foreground: oklch(0.72 0.02 85);
+  --accent: oklch(0.66 0.115 45);
+  --accent-foreground: oklch(0.98 0.01 45);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.62 0.05 118);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+  }
+}
+
+@utility tracking-label {
+  letter-spacing: 0.22em;
+}
+
+/* ============ Motion ============ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes hero-zoom {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.hero-zoom {
+  animation: hero-zoom 8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .animate-fade-up,
+  .hero-zoom {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+}
