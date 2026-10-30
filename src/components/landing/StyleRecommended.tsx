@@ -16,7 +16,7 @@ export function StyleRecommended() {
         </h2>
 
         <div
-          className="mt-6 flex flex-wrap gap-3"
+          className="mt-6 flex flex-nowrap overflow-x-auto no-scrollbar scroll-smooth gap-2.5 sm:gap-3 pb-1"
           role="tablist"
           aria-label="Style recommendations"
         >
@@ -28,9 +28,9 @@ export function StyleRecommended() {
               aria-selected={active === tab.label}
               onClick={() => setActive(tab.label)}
               className={cn(
-                "border px-5 py-2.5 text-xs font-medium tracking-wide transition-colors",
+                "shrink-0 border px-3.5 py-2 sm:px-5 sm:py-2.5 text-[11px] sm:text-xs font-semibold tracking-wider uppercase transition-all whitespace-nowrap",
                 active === tab.label
-                  ? "border-primary bg-primary text-primary-foreground"
+                  ? "border-primary bg-primary text-primary-foreground shadow-xs"
                   : "border-border bg-transparent text-muted-foreground hover:border-foreground/30 hover:text-foreground",
               )}
             >

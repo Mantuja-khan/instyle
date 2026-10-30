@@ -17,6 +17,26 @@ import heelWorn from "@/assets/heel-worn.jpg";
 import heelDetail from "@/assets/heel-detail.jpg";
 
 import champagneOrganzaSharara from "@/assets/champagne-organza-sharara.png";
+import oliveAnarkaliSuit from "@/assets/olive-anarkali-suit.png";
+import oliveAnarkaliEditorial from "@/assets/olive-anarkali-editorial.jpg";
+import oliveAnarkaliDetail from "@/assets/olive-anarkali-detail.jpg";
+
+import plumSilkSharara from "@/assets/plum-silk-sharara.png";
+import plumShararaEditorial from "@/assets/plum-sharara-editorial.jpg";
+import plumShararaDetail from "@/assets/plum-sharara-detail.jpg";
+
+import rosewoodPeplumSharara from "@/assets/rosewood-peplum-sharara.png";
+import rosewoodPeplumEditorial from "@/assets/rosewood-peplum-editorial.jpg";
+import rosewoodPeplumDetail from "@/assets/rosewood-peplum-detail.jpg";
+
+import slateScallopCoOrd from "@/assets/slate-scallop-co-ord.png";
+import slateCoOrdEditorial from "@/assets/slate-co-ord-editorial.jpg";
+import slateCoOrdDetail from "@/assets/slate-co-ord-detail.jpg";
+
+import sageKurtaShararaSet from "@/assets/sage-kurta-sharara-set.png";
+import sageKurtaEditorial from "@/assets/sage-kurta-editorial.jpg";
+import sageKurtaDetail from "@/assets/sage-kurta-detail.jpg";
+
 import shararaSide from "@/assets/sharara-side.jpg";
 import shararaBack from "@/assets/sharara-back.jpg";
 import shararaDetail from "@/assets/sharara-detail.jpg";
@@ -245,6 +265,212 @@ export const champagneOrganzaShararaProduct: Product = {
   ],
 };
 
+export const oliveAnarkaliProduct: Product = {
+  id: "olive-embroidered-anarkali",
+  name: "Olive Green Embroidered Georgette Anarkali Suit",
+  price: 9499,
+  originalPrice: 12999,
+  image: oliveAnarkaliSuit,
+  images: [oliveAnarkaliSuit, oliveAnarkaliEditorial, oliveAnarkaliDetail],
+  category: "Ethnic & Fusion",
+  rating: 4.9,
+  reviewsCount: 168,
+  description:
+    "A regal floor-sweeping Anarkali silhouette cut from fluid deep olive crepe georgette. Paired with a delicate floral lace scalloped dupatta embroidered with champagne gold zari and glistening sequins for magnificent evening grandeur.",
+  colors: [
+    { name: "Deep Olive", hex: "#444E35", inStock: true },
+    { name: "Forest Emerald", hex: "#1D3B2A", inStock: true },
+    { name: "Midnight Black", hex: "#1A1A1A", inStock: true },
+  ],
+  sizes: ["XS", "S", "M", "L", "XL"],
+  sku: "ETH-ANARKALI-OLIVE",
+  tags: ["wedding", "festive", "date-night", "Dresses", "Ethnic"],
+  specifications: {
+    Material: "Pure Viscose Georgette with Butter Silk Lining",
+    "Set Includes": "Flared Anarkali Gown, Tonal Pants & Scalloped Net Dupatta",
+    Dupatta: "Intricate Floral Zari Jaal with Scalloped Edges",
+    Length: "Floor Length Anarkali (55 inches)",
+    Origin: "Handcrafted Atelier Collection",
+    Care: "Dry clean only to maintain zari threadwork",
+  },
+  reviews: [
+    {
+      id: "rev-olive-1",
+      author: "Radhika Kulkarni",
+      rating: 5,
+      date: "October 25, 2026",
+      title: "Royal silhouette and exceptional drape!",
+      comment:
+        "The deep olive shade is so distinctive and rich. The dupatta is practically a piece of art with the floral jaal. Received compliments from everyone at the sangeet.",
+      verified: true,
+    },
+  ],
+};
+
+export const plumSilkShararaProduct: Product = {
+  id: "plum-embroidered-silk-sharara",
+  name: "Plum Mulberry Silk Embroidered Sharara Set",
+  price: 8999,
+  originalPrice: 11999,
+  image: plumSilkSharara,
+  images: [plumSilkSharara, plumShararaEditorial, plumShararaDetail],
+  category: "Ethnic & Fusion",
+  rating: 4.9,
+  reviewsCount: 134,
+  description:
+    "Crafted from luminous mulberry raw silk in an alluring jewel plum tone. The short kurti features an architectural V-neckline adorned with ivorine threadwork and blooming vine motifs, complemented by dramatic wide-flare sharara pants.",
+  colors: [
+    { name: "Plum Wine", hex: "#5C2C4F", inStock: true },
+    { name: "Royal Magenta", hex: "#7B1E58", inStock: true },
+    { name: "Navy Twilight", hex: "#1C2442", inStock: true },
+  ],
+  sizes: ["XS", "S", "M", "L", "XL"],
+  sku: "ETH-SHARARA-PLUM",
+  tags: ["wedding", "festive", "date-night", "Ethnic", "Dresses"],
+  specifications: {
+    Material: "Premium Raw Silk with Satin Finish & Smooth Shantoon Lining",
+    Workmanship: "Fine Resham Threadwork and Tonal Embroidery along Borders",
+    Pants: "Extravagant Pleated Wide-Leg Sharara with Embroidered Hem",
+    Origin: "Handcrafted Heritage Workshop",
+    Care: "Professional dry clean only",
+  },
+  reviews: [
+    {
+      id: "rev-plum-1",
+      author: "Meera Sen",
+      rating: 5,
+      date: "October 26, 2026",
+      title: "The silk sheen and embroidery are unmatched",
+      comment:
+        "The plum shade looks so royal under evening lights. The fit through the bust and waist is tailored to perfection.",
+      verified: true,
+    },
+  ],
+};
+
+export const rosewoodPeplumShararaProduct: Product = {
+  id: "rosewood-peplum-sharara",
+  name: "Rosewood Silk Peplum Sharara Ensemble",
+  price: 7999,
+  originalPrice: 10499,
+  image: rosewoodPeplumSharara,
+  images: [rosewoodPeplumSharara, rosewoodPeplumEditorial, rosewoodPeplumDetail],
+  category: "Ethnic & Fusion",
+  rating: 4.8,
+  reviewsCount: 152,
+  description:
+    "An ethereal dusky rosewood ensemble featuring a flattering gathered peplum kurti with floral neck yoke embroidery, wide palazzo-sharara pants, and a fluid scalloped organza dupatta bordered in gold gota patti.",
+  colors: [
+    { name: "Dusky Rosewood", hex: "#A8726A", inStock: true },
+    { name: "Muted Terracotta", hex: "#C76B4E", inStock: true },
+    { name: "Warm Almond", hex: "#D6B89E", inStock: true },
+  ],
+  sizes: ["XS", "S", "M", "L", "XL"],
+  sku: "ETH-SHARARA-ROSEWOOD",
+  tags: ["neutral", "wedding", "festive", "weekend", "Ethnic"],
+  specifications: {
+    Material: "Textured Chanderi Silk with Butter Crepe Lining",
+    Neckline: "Mandarin Slit Collar with Intricate Floral Yoke Embroidery",
+    Dupatta: "Sheer Tissue Organza with Scalloped Gota Trim",
+    Origin: "Handcrafted in Chanderi, India",
+    Care: "Gentle dry clean only",
+  },
+  reviews: [
+    {
+      id: "rev-rosewood-1",
+      author: "Pooja Singhania",
+      rating: 5,
+      date: "October 27, 2026",
+      title: "Subtle, understated elegance",
+      comment:
+        "If you love neutral, earthy tones that still look festive and expensive, this is the one. The peplum flare gives the most slimming waist contour.",
+      verified: true,
+    },
+  ],
+};
+
+export const slateScallopCoOrdProduct: Product = {
+  id: "slate-scallop-co-ord",
+  name: "Slate Blue Scallop Tunic & Flared Trouser Co-Ord",
+  price: 6499,
+  originalPrice: 8499,
+  image: slateScallopCoOrd,
+  images: [slateScallopCoOrd, slateCoOrdEditorial, slateCoOrdDetail],
+  category: "Ethnic & Fusion",
+  rating: 4.8,
+  reviewsCount: 126,
+  description:
+    "A contemporary minimalist fusion silhouette in dusky slate blue. Showcases modern laser-cut scalloped hemlines along the voluminous bell sleeves and tunic hem, accessorized with handcrafted floral tassels and a two-tone ombré dupatta.",
+  colors: [
+    { name: "Dusky Slate Blue", hex: "#6D879B", inStock: true },
+    { name: "Sage Mist", hex: "#8FA391", inStock: true },
+    { name: "Cream Oat", hex: "#EAE3D4", inStock: true },
+  ],
+  sizes: ["XS", "S", "M", "L", "XL"],
+  sku: "ETH-COORD-SLATE",
+  tags: ["neutral", "weekend", "office", "travel", "Ethnic", "Dresses"],
+  specifications: {
+    Material: "Premium Smooth Cotton-Modal Blend with Soft Sheen",
+    Details: "Architectural Cut Scallop Hem & Floral Tassel Tie Neck",
+    Pants: "High-Rise Pleated Wide-Leg Trousers with Side Pockets",
+    Origin: "Contemporary Fusion Studio",
+    Care: "Machine wash cold delicate or dry clean",
+  },
+  reviews: [
+    {
+      id: "rev-slate-1",
+      author: "Nisha Patel",
+      rating: 5,
+      date: "October 28, 2026",
+      title: "Ultra comfortable and effortlessly chic",
+      comment:
+        "The scalloped edges and little flower tassels look so designer and fresh! You can easily dress this up for a cocktail dinner or wear it to daytime celebrations.",
+      verified: true,
+    },
+  ],
+};
+
+export const sageKurtaShararaProduct: Product = {
+  id: "sage-button-kurta-sharara",
+  name: "Mint Sage Buttoned Kurta & Pleated Sharara Lounge Set",
+  price: 5999,
+  originalPrice: 7999,
+  image: sageKurtaShararaSet,
+  images: [sageKurtaShararaSet, sageKurtaEditorial, sageKurtaDetail],
+  category: "Ethnic & Fusion",
+  rating: 4.9,
+  reviewsCount: 140,
+  description:
+    "An effortless modern classic crafted from breathable sage pastel modal silk. Features a clean mandarin collar with delicate cloth-covered front buttons, side slits, and tiered flared sharara culottes paired with earthy tan leather accessories.",
+  colors: [
+    { name: "Mint Sage", hex: "#B8CDBB", inStock: true },
+    { name: "Dusty Lavender", hex: "#C8BDD4", inStock: true },
+    { name: "Ivory Ecru", hex: "#F3EFE6", inStock: true },
+  ],
+  sizes: ["XS", "S", "M", "L", "XL"],
+  sku: "ETH-LOUNGE-SAGE",
+  tags: ["neutral", "weekend", "office", "travel", "Ethnic"],
+  specifications: {
+    Material: "100% Breathable Fine Modal-Silk Weave",
+    Kurta: "Mandarin Slit Neck with Handcrafted Covered Buttons",
+    Bottom: "Tiered Gathered Sharara Trouser with Elastic Waist & Drawstring",
+    Origin: "Modern Loungewear Couture",
+    Care: "Hand wash cold or gentle cycle inside out",
+  },
+  reviews: [
+    {
+      id: "rev-sage-1",
+      author: "Tanvi Saxena",
+      rating: 5,
+      date: "October 29, 2026",
+      title: "Softest fabric imaginable!",
+      comment:
+        "Feels like a cloud against the skin. The mint sage color is soothing and serene. Perfect for festive family lunches and weekend gatherings.",
+      verified: true,
+    },
+  ],
+};
+
 export const floralBohoTunicDressProduct: Product = {
   id: "floral-boho-tunic-dress",
   name: "Botanical Embroidered Boho Tunic Dress",
@@ -414,6 +640,11 @@ export const ruchedChiffonSleeveDressProduct: Product = {
 
 export const newArrivals: Product[] = [
   champagneOrganzaShararaProduct,
+  oliveAnarkaliProduct,
+  plumSilkShararaProduct,
+  rosewoodPeplumShararaProduct,
+  slateScallopCoOrdProduct,
+  sageKurtaShararaProduct,
   indigoEmbroideredVyshyvankaProduct,
   floralBohoTunicDressProduct,
   ruchedChiffonSleeveDressProduct,
@@ -484,7 +715,12 @@ export const newArrivals: Product[] = [
 
 export const trending: Product[] = [
   elegantHighHeels,
+  oliveAnarkaliProduct,
+  plumSilkShararaProduct,
   champagneOrganzaShararaProduct,
+  rosewoodPeplumShararaProduct,
+  slateScallopCoOrdProduct,
+  sageKurtaShararaProduct,
   indigoEmbroideredVyshyvankaProduct,
   ruchedChiffonSleeveDressProduct,
   crossoverRibbedKnitDressProduct,
@@ -536,7 +772,6 @@ export const styleTabs: { label: string; tag: string }[] = [
   { label: "Date Night", tag: "date-night" },
   { label: "Weekend Vibes", tag: "weekend" },
   { label: "Office Ready", tag: "office" },
-  { label: "Travel Essentials", tag: "travel" },
 ];
 
 export const catalog: Product[] = [

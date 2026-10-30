@@ -137,9 +137,9 @@ export function Hero() {
       tabIndex={0}
       aria-label="Editorial Fashion Hero Slider"
     >
-      {/* Hero Container */}
-      <div className="relative min-h-[680px] sm:min-h-[740px] lg:min-h-[820px] xl:min-h-[880px] w-full flex items-center">
-        {/* Full-width Background Slide Images */}
+      {/* Hero Container - Full height on small screen (h-screen / min-h-screen) */}
+      <div className="relative h-screen min-h-[580px] sm:min-h-[740px] lg:min-h-[820px] xl:min-h-[880px] w-full flex items-center">
+        {/* Full-width Background Slide Images with continuous scaling animation */}
         {slides.map((slide, index) => {
           const isActive = index === currentSlide;
           return (
@@ -156,8 +156,8 @@ export function Hero() {
                 width={1920}
                 height={1200}
                 fetchPriority={index === 0 ? "high" : "low"}
-                className={`h-full w-full object-cover object-[72%_center] sm:object-[78%_center] lg:object-[82%_center] xl:object-[84%_center] transition-transform duration-[7000ms] ease-out ${
-                  isActive ? "scale-100" : "scale-105"
+                className={`h-full w-full object-cover object-[72%_center] sm:object-[78%_center] lg:object-[82%_center] xl:object-[84%_center] ${
+                  isActive ? "hero-zoom" : "scale-105"
                 }`}
               />
             </div>
@@ -177,7 +177,7 @@ export function Hero() {
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#202719] via-[#202719]/50 to-transparent pointer-events-none z-10" />
         <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#202719]/50 to-transparent pointer-events-none z-10" />
 
-        {/* Left Vertical Appointment Tab (Desktop) */}
+        {/* Left Vertical Appointment Tab (Desktop Only) */}
         <button
           type="button"
           onClick={() => setIsAppointmentOpen(true)}
@@ -193,29 +193,19 @@ export function Hero() {
           </span>
         </button>
 
-        {/* Mobile/Tablet Booking Quick Pill */}
-        <button
-          type="button"
-          onClick={() => setIsAppointmentOpen(true)}
-          className="xl:hidden absolute top-20 left-4 sm:left-6 z-30 inline-flex items-center gap-2 bg-[#89966A]/90 backdrop-blur-md px-3.5 py-1.5 border border-[#B7955B]/50 text-white text-[10px] font-semibold tracking-[0.2em] uppercase shadow-lg hover:bg-[#89966A]"
-        >
-          <Calendar size={13} />
-          <span>Book Stylist</span>
-        </button>
-
         {/* Main Content Area on Left (Unboxed, Open Editorial Typography with Smooth Transitions) */}
-        <div className="relative mx-auto w-full max-w-7xl px-6 sm:px-10 lg:px-16 xl:px-24 pt-24 sm:pt-28 lg:pt-32 pb-16 sm:pb-20 z-20">
+        <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-10 lg:px-16 xl:px-24 pt-20 sm:pt-28 lg:pt-32 pb-16 sm:pb-20 z-20">
           <div key={currentSlide} className="max-w-xl lg:max-w-2xl py-4 animate-fade-up">
             {/* Eyebrow Text */}
             <div className="flex items-center gap-3">
               <span className="h-[1.5px] w-7 bg-[#B7955B]" />
-              <p className="text-[11px] sm:text-xs font-sans font-semibold tracking-[0.26em] text-[#B7955B] uppercase drop-shadow-sm">
+              <p className="text-[10px] sm:text-xs font-sans font-semibold tracking-[0.24em] sm:tracking-[0.26em] text-[#B7955B] uppercase drop-shadow-sm">
                 {activeSlideData.eyebrow}
               </p>
             </div>
 
             {/* Main Heading */}
-            <h1 className="mt-4 sm:mt-5 font-display text-4xl sm:text-5xl lg:text-6xl xl:text-[4.6rem] font-normal leading-[1.06] text-[#FFFFFF] tracking-tight drop-shadow-md">
+            <h1 className="mt-3 sm:mt-5 font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-[4.6rem] font-normal leading-[1.06] text-[#FFFFFF] tracking-tight drop-shadow-md">
               {activeSlideData.lines.map((line, idx) => (
                 <span key={idx} className="block">
                   {line}
@@ -227,16 +217,16 @@ export function Hero() {
             </h1>
 
             {/* Description */}
-            <p className="mt-5 sm:mt-6 max-w-lg text-sm sm:text-[15px] lg:text-base leading-relaxed text-white/90 font-light drop-shadow-sm">
+            <p className="mt-3 sm:mt-6 max-w-lg text-xs xs:text-sm sm:text-[15px] lg:text-base leading-relaxed text-white/90 font-light drop-shadow-sm line-clamp-2 sm:line-clamp-none">
               {activeSlideData.description}
             </p>
 
-            {/* CTA Buttons */}
-            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5">
+            {/* CTA Buttons: SINGLE ROW ON ALL SCREEN SIZES INCLUDING SMALL */}
+            <div className="mt-6 sm:mt-10 flex flex-row items-center gap-2.5 xs:gap-3 sm:gap-5 w-full max-w-md">
               {/* Primary Button */}
               <a
                 href={activeSlideData.primaryCta.href}
-                className="group relative inline-flex items-center justify-center gap-3 bg-[#89966A] hover:bg-[#78855a] text-[#FFFFFF] px-8 py-4 text-xs font-semibold tracking-[0.22em] uppercase transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0"
+                className="flex-1 inline-flex items-center justify-center text-center bg-[#89966A] hover:bg-[#78855a] text-[#FFFFFF] px-3 xs:px-4 sm:px-8 py-3 sm:py-4 text-[10px] xs:text-[11px] sm:text-xs font-semibold tracking-[0.12em] sm:tracking-[0.22em] uppercase transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
               >
                 <span>{activeSlideData.primaryCta.label}</span>
               </a>
@@ -244,16 +234,16 @@ export function Hero() {
               {/* Secondary Button */}
               <a
                 href={activeSlideData.secondaryCta.href}
-                className="group relative inline-flex items-center justify-center gap-3 bg-black/20 hover:bg-[#F4EFE5]/15 border border-[#F4EFE5]/80 hover:border-[#B7955B] text-[#FFFFFF] hover:text-[#B7955B] px-8 py-4 text-xs font-semibold tracking-[0.22em] uppercase transition-all duration-300 backdrop-blur-sm shadow-md"
+                className="flex-1 inline-flex items-center justify-center text-center bg-black/20 hover:bg-[#F4EFE5]/15 border border-[#F4EFE5]/80 hover:border-[#B7955B] text-[#FFFFFF] hover:text-[#B7955B] px-3 xs:px-4 sm:px-8 py-3 sm:py-4 text-[10px] xs:text-[11px] sm:text-xs font-semibold tracking-[0.12em] sm:tracking-[0.22em] uppercase transition-all duration-300 backdrop-blur-sm shadow-md whitespace-nowrap"
               >
                 <span>{activeSlideData.secondaryCta.label}</span>
               </a>
             </div>
 
             {/* Slide collection capsule subtitle */}
-            <div className="mt-8 pt-5 border-t border-[#B7955B]/30 flex items-center justify-between text-[11px] text-[#F4EFE5]/70 font-sans tracking-widest uppercase">
-              <span className="font-medium text-white/90">{activeSlideData.badge}</span>
-              <span className="text-[#B7955B] font-semibold">
+            <div className="mt-6 sm:mt-8 pt-4 sm:pt-5 border-t border-[#B7955B]/30 flex items-center justify-between text-[10px] sm:text-[11px] text-[#F4EFE5]/70 font-sans tracking-widest uppercase">
+              <span className="font-medium text-white/90 truncate mr-2">{activeSlideData.badge}</span>
+              <span className="text-[#B7955B] font-semibold shrink-0">
                 Editorial 0{currentSlide + 1} / 0{slides.length}
               </span>
             </div>

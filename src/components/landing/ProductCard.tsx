@@ -49,8 +49,20 @@ export function ProductCard({
               src={product.image}
               alt={product.name}
               loading="lazy"
-              className="h-full w-full object-contain p-2 transition-transform duration-700 group-hover:scale-105"
+              className={cn(
+                "h-full w-full object-contain p-2 transition-all duration-700 group-hover:scale-105",
+                product.images && product.images.length > 1 && "group-hover:opacity-0"
+              )}
             />
+
+            {product.images && product.images[1] && (
+              <img
+                src={product.images[1]}
+                alt={`${product.name} alternate view`}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover opacity-0 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
+              />
+            )}
 
             {/* Quick Add To Cart on Hover overlay */}
             <div className="absolute inset-x-2 bottom-2 translate-y-3 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 hidden sm:block">
